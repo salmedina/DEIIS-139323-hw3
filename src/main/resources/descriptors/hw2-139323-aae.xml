@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="inputAnnotator">
+      <import name="descriptors.inputAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="tokenAnnotator">
+      <import name="descriptors.tokenAnnotator"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="nGramAnnotator">
+      <import name="descriptors.nGramAnnotator"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="scoringAnnotator">
+      <import name="descriptors.scoringAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="evaluationAnnotator">
+      <import name="descriptors.evaluationAnnotator"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>hw2-139323-aae</name>
+    <description>Analyze through n-grams a set of answers given to a question and determines which ones are correct. As an output it is shown the precision of N correct answers.</description>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>inputAnnotator</node>
+        <node>tokenAnnotator</node>
+      <node>nGramAnnotator</node>
+      <node>scoringAnnotator</node>
+        <node>evaluationAnnotator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.QuestionNGram</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerNGram</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

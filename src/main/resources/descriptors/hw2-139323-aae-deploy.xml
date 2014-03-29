@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><analysisEngineDeploymentDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>hw2-139323-aae-deploy</name>
+  <description>The AE deployed determines if an answer is reliable to a given question.</description>
+  <version>1.0</version>
+  <vendor/>
+  <deployment protocol="jms" provider="activemq">
+    <casPool numberOfCASes="1" initialFsHeapSize="2000000"/>
+    <service>
+      <inputQueue endpoint="ZalQ" brokerURL="tcp://mu.lti.cmu.edu:61616" prefetch="0"/>
+      <topDescriptor>
+<import name="descriptors.hw2-139323-aae"/>
+      </topDescriptor>      
+    </service>
+  </deployment>
+</analysisEngineDeploymentDescription>
