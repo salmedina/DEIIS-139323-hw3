@@ -1,68 +1,28 @@
-28/03/14 04:25:20 PM - 1: org.apache.uima.adapter.jms.service.UIMA_Service.initialize(67): INFO: UIMA-AS version 2.4.0
-28/03/14 04:25:21 PM - 1: org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.deploy: WARNING: 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'casManager' defined in URL [file:C:/Users/Zal/AppData/Local/Temp/UIMAdd2springOutput6373524514561558506.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'disableJCasCache' of bean class [org.apache.uima.aae.AsynchAECasManager_impl]: Bean property 'disableJCasCache' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1353)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1076)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
-	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
-	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
-	at org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.deploy(SpringContainerDeployer.java:474)
-	at org.apache.uima.adapter.jms.service.UIMA_Service.deploy(UIMA_Service.java:166)
-	at org.apache.uima.adapter.jms.service.UIMA_Service.deploy(UIMA_Service.java:197)
-	at org.apache.uima.adapter.jms.service.UIMA_Service.main(UIMA_Service.java:426)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.apache.uima.bootstrap.UimaBootstrap.main(UimaBootstrap.java:98)
-Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'disableJCasCache' of bean class [org.apache.uima.aae.AsynchAECasManager_impl]: Bean property 'disableJCasCache' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
-	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1016)
-	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:896)
-	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
-	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1350)
-	... 21 more
-
-28/03/14 04:25:21 PM - 1: org.apache.uima.adapter.jms.service.UIMA_Service.main: WARNING: 
-org.apache.uima.resource.ResourceInitializationException
-	at org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.deploy(SpringContainerDeployer.java:489)
-	at org.apache.uima.adapter.jms.service.UIMA_Service.deploy(UIMA_Service.java:166)
-	at org.apache.uima.adapter.jms.service.UIMA_Service.deploy(UIMA_Service.java:197)
-	at org.apache.uima.adapter.jms.service.UIMA_Service.main(UIMA_Service.java:426)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.apache.uima.bootstrap.UimaBootstrap.main(UimaBootstrap.java:98)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'casManager' defined in URL [file:C:/Users/Zal/AppData/Local/Temp/UIMAdd2springOutput6373524514561558506.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'disableJCasCache' of bean class [org.apache.uima.aae.AsynchAECasManager_impl]: Bean property 'disableJCasCache' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1353)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1076)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
-	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
-	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
-	at org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.deploy(SpringContainerDeployer.java:474)
-	... 8 more
-Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'disableJCasCache' of bean class [org.apache.uima.aae.AsynchAECasManager_impl]: Bean property 'disableJCasCache' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
-	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1016)
-	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:896)
-	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
-	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1350)
-	... 21 more
-
+3/29/14 6:12:05 PM - 1: org.apache.uima.adapter.jms.service.UIMA_Service.initialize(68): INFO: UIMA-AS version 2.4.0
+3/29/14 6:12:07 PM - 1: org.apache.uima.aae.controller.BaseAnalysisEngineController.logPlatformInfo: INFO: 
++------------------------------------------------------------------
+                   Starting UIMA AS Service - PID: 4342
++------------------------------------------------------------------
++ Service Name:hw2-139323-aae
++ Service Queue Name:hw2-139323-Q
++ Service Start Time:29 Mar 2014 18:12:05 
++ UIMA AS Version:2.4.0
++ UIMA Core Version:2.4.0
++ OS Name:Linux
++ OS Version:3.5.0-17-generic
++ OS Architecture:amd64
++ OS CPU Count:4
++ JVM Vendor:Oracle Corporation
++ JVM Name:OpenJDK 64-Bit Server VM
++ JVM Version:24.45-b08
++ JVM Input Args:[-DVNS_HOST=localhost, -DVNS_PORT=9000, -Duima.home=/usr/local/apache-uima-as, -Duima.datapath=, -Djava.util.logging.config.file=/usr/local/apache-uima-as/config/Logger.properties, -Duima.tools.cvd.manpath.notset, -Xms128M, -Xmx800M, -Dlog4j.configuration=file:/usr/local/apache-uima-as/as_config/uimaAsLog4j.properties, -DUimaBootstrapSuppressClassPathDisplay, -Dorg.apache.uima.jarpath=/home/zal/workspace/hw3-139323/:/home/zal/workspace/hw3-139323/target:/usr/local/apache-uima-as/examples/resources:/usr/local/apache-uima-as/lib::/usr/local/apache-uima-as/lib/xmlbeans:/usr/local/apache-uima-as/apache-activemq-5.4.1:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/optional:.:/usr/lib/jvm/java-6-openjdk/lib]
++ JVM Classpath:/usr/local/apache-uima-as/lib/uimaj-bootstrap.jar
++ JVM Loaded Jars:/usr/local/apache-uima-as/lib/uimaj-bootstrap.jar:/home/zal/workspace/hw3-139323/:/home/zal/workspace/hw3-139323/target/hw2-139323-0.0.1-SNAPSHOT.jar:/usr/local/apache-uima-as/examples/resources/:/usr/local/apache-uima-as/lib/uimaj-as-core.jar:/usr/local/apache-uima-as/lib/uima-adapter-soap.jar:/usr/local/apache-uima-as/lib/xmlbeans.jar:/usr/local/apache-uima-as/lib/uima-document-annotation.jar:/usr/local/apache-uima-as/lib/uima-cpe.jar:/usr/local/apache-uima-as/lib/jVinci.jar:/usr/local/apache-uima-as/lib/uima-core.jar:/usr/local/apache-uima-as/lib/uimaj-as-activemq.jar:/usr/local/apache-uima-as/lib/uimaj-as-camel.jar:/usr/local/apache-uima-as/lib/uima-tools.jar:/usr/local/apache-uima-as/lib/uimaj-as-jms.jar:/usr/local/apache-uima-as/lib/uima-adapter-vinci.jar:/usr/local/apache-uima-as/lib/uima-examples.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/activemq-all-5.4.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/activemq-camel-5.4.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/activemq-core-5.4.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/activemq-optional-5.4.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/spring-expression-3.0.3.RELEASE.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/spring-aop-3.0.3.RELEASE.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/spring-core-3.0.3.RELEASE.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/activemq-console-5.4.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/geronimo-jms_1.1_spec-1.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/spring-tx-3.0.3.RELEASE.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/activemq-spring-5.4.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/xbean-spring-3.7.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/kahadb-5.4.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/spring-asm-3.0.3.RELEASE.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/commons-logging-1.1.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/spring-context-3.0.3.RELEASE.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/spring-beans-3.0.3.RELEASE.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/spring-jms-3.0.3.RELEASE.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/optional/geronimo-servlet_2.5_spec-1.2.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/optional/xmlpull-1.1.3.4d_b4_min.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/optional/xstream-1.3.1.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/optional/jetty-all-server-7.0.1.v20091125.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/optional/log4j-1.2.14.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/optional/commons-codec-1.2.jar:/usr/local/apache-uima-as/apache-activemq-5.4.1/lib/optional/commons-httpclient-3.1.jar:/home/zal/workspace/hw3-139323/src/main/resources/./:/usr/lib/jvm/java-6-openjdk/lib/dt.jar:/usr/lib/jvm/java-6-openjdk/lib/jconsole.jar:/usr/lib/jvm/java-6-openjdk/lib/tools.jar:/usr/lib/jvm/java-6-openjdk/lib/sa-jdi.jar:
++ JVM LIB_PATH:/usr/local/apache-uima-as/uimacpp/lib:/usr/local/apache-uima-as/uimacpp/examples/tutorial/src::/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
++------------------------------------------------------------------ 
+3/29/14 6:12:08 PM - 1: org.apache.uima.adapter.jms.activemq.JmsInputChannel.setEndpointName: INFO: top_level_input_queue_service_1 Service Starting - Listening for Messages 
+3/29/14 6:12:08 PM - 1: org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.waitForServiceNotification: INFO: Uima EE Client Blocking - Awaiting Top Level Controller Initialization Notification
+3/29/14 6:12:08 PM - 11: org.apache.uima.aae.UimaAsThreadFactory$1.UimaAsThreadFactory.run(): INFO: Controller: hw2-139323-aae Initializing AE instance on Thread Id: 11
+3/29/14 6:12:08 PM - 11: org.apache.uima.aae.controller.PrimitiveAnalysisEngineController_impl.postInitialize: INFO: ********* Initialized the Controller. hw2-139323-aae Ready To Process. ********
+3/29/14 6:12:08 PM - 1: org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.doStartListeners: INFO: Controller: hw2-139323-aae Starting Listener on Endpoint: queue://hw2-139323-Q Selector: Command=2000 OR Command=2002 Broker: tcp://localhost:61616
+3/29/14 6:12:09 PM - 1: org.apache.uima.adapter.jms.activemq.SpringContainerDeployer.doStartListeners: INFO: Controller: hw2-139323-aae Starting Listener on Endpoint: queue://hw2-139323-Q Selector: Command=2001 Broker: tcp://localhost:61616

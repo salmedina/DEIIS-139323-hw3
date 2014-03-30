@@ -4,19 +4,19 @@
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="inputAnnotator">
-      <import name="descriptors.inputAnnotator"/>
+      <import name="inputAnnotator"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="tokenAnnotator">
-      <import name="descriptors.tokenAnnotator"/>
+      <import name="tokenAnnotator"/>
     </delegateAnalysisEngine>
   <delegateAnalysisEngine key="nGramAnnotator">
-      <import name="descriptors.nGramAnnotator"/>
+      <import name="nGramAnnotator"/>
     </delegateAnalysisEngine>
   <delegateAnalysisEngine key="scoringAnnotator">
-      <import name="descriptors.scoringAnnotator"/>
+      <import name="scoringAnnotator"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="evaluationAnnotator">
-      <import name="descriptors.evaluationAnnotator"/>
+      <import name="evaluationAnnotator"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>

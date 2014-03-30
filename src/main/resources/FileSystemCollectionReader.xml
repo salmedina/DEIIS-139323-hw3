@@ -37,7 +37,7 @@
       <nameValuePair>
         <name>InputDirectory</name>
         <value>
-          <string>E:\MCC\Semester 4\IIS\Workspace\hw3-139323\src\main\resources\inputData</string>
+          <string>/home/zal/workspace/hw3-139323/src/main/resources/inputData</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

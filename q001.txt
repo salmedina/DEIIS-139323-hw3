@@ -1,0 +1,17 @@
+Q: Booth shot Lincoln
+A: + 1.00 Booth shot Lincoln
+A: - 0.00 Booth was assassinated by Lincoln
+A: - 1.00 Lincoln shot Booth
+A: + 0.00 Lincoln was assassinated by Booth
+A: + 0.00 Lincoln was shot by Booth
+A: - 0.00 Lincoln assassinated Booth
+A: - 0.00 Booth was shot by Lincoln
+A: + 0.00 Booth assassinated Lincoln
+
+Precision @1: 1.00%
+Precision @3: 0.50%
+Precision @5: 0.00%
+Precision @7: 0.00%
+Precision @6: 0.00%
+Precision @4: 0.57%
+Precision @2: 0.67%

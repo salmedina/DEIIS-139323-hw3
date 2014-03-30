@@ -69,7 +69,6 @@ public class PrintConsumer extends CasConsumer_ImplBase {
     if (!mOutputDir.exists()) {
       mOutputDir.mkdirs();
     }
-    cas2xml = new CasToInlineXml();
   }
 
   /**
@@ -101,7 +100,7 @@ public class PrintConsumer extends CasConsumer_ImplBase {
       String outFileName ="out";
       try {
         inFile = new File(new URL(fileLoc.getUri()).getPath());
-        outFileName = inFile.getName();
+        outFileName = ((String) getConfigParameterValue(PARAM_OUTPUTDIR)).trim()+"/" +inFile.getName();
         if (fileLoc.getOffsetInSource() > 0) {
           outFileName += fileLoc.getOffsetInSource();
         }

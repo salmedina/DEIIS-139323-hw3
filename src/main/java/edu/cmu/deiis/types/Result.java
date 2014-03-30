@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** This annotation stores the final result from the analysis that is realized in the Evalutation Annotator
- * Updated by JCasGen Fri Mar 28 17:54:22 CST 2014
- * XML source: E:/MCC/Semester 4/IIS/Workspace/hw3-139323/src/main/resources/descriptors/deiis_types.xml
+ * Updated by JCasGen Sat Mar 29 04:39:00 CST 2014
+ * XML source: /home/zal/workspace/hw3-139323/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Result extends Annotation {
   /** @generated

@@ -4,7 +4,7 @@
     <collectionReader>
         <collectionIterator>
             <descriptor>
-                <import location="FileSystemCollectionReader.xml"/>
+                <import name="FileSystemCollectionReader.xml"/>
             </descriptor>
             <configurationParameterSettings>
                 <nameValuePair>
@@ -19,7 +19,7 @@
     <casProcessors casPoolSize="3" processingUnitThreadCount="1">
     <casProcessor deployment="integrated" name="hw2-139323-aae">
         <descriptor>
-            <import location="hw2-139323-aae.xml"/>
+            <import name="hw2-139323-aae"/>
         </descriptor>
             <deploymentParameters/>
         <errorHandling>
@@ -31,7 +31,7 @@
     </casProcessor>
     <casProcessor deployment="integrated" name="printConsumer">
         <descriptor>
-            <import location="printConsumer.xml"/>
+            <import name="printConsumer.xml"/>
         </descriptor>
             <deploymentParameters/>
         <errorHandling>
