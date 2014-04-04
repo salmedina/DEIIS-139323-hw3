@@ -1,4 +1,4 @@
-package edu.cmu.deiis.Tools;
+package edu.cmu.deiis.tools;
 
 import edu.cmu.deiis.types.Annotation;
 

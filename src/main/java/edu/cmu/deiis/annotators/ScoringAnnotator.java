@@ -8,8 +8,8 @@ import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 
-import edu.cmu.deiis.Tools.Tool;
 import edu.cmu.deiis.types.*;
+import edu.cmu.deiis.tools.Tool;
 
 public class ScoringAnnotator extends JCasAnnotator_ImplBase {
 	
@@ -30,8 +30,6 @@ public class ScoringAnnotator extends JCasAnnotator_ImplBase {
 		String[] questionNGrams = getStrArr(docText, qNGram.getUnigram().getElements());
 		//Save question for output
 		qNGram.getQuestion().addToIndexes();	// OUT
-		System.out.printf("ScoringAnnotator> Q: %s\n", 
-				Tool.getAnnoStr(docText, qNGram.getQuestion()));
 		
 		//Get the input answers
 		FSIndex		aIndex = aJCas.getAnnotationIndex(AnswerNGram.type);
@@ -57,10 +55,6 @@ public class ScoringAnnotator extends JCasAnnotator_ImplBase {
 			answerScore.setScore(score);
 			answerScore.setAnswer(aNGram.getAnswer());
 			answerScore.addToIndexes();	// OUT
-			System.out.printf("ScoringAnnotator> A: %s - Score: %f - %s\n", 
-								Tool.getAnnoStr(docText, aNGram.getAnswer()), 
-								score,
-								Tool.boolToStr(aNGram.getAnswer().getIsCorrect()));
 		}
 	}
 

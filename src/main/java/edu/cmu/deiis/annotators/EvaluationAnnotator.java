@@ -11,7 +11,7 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.JCas;
 
-import edu.cmu.deiis.Tools.*;
+import edu.cmu.deiis.tools.AnswerRes;
 import edu.cmu.deiis.types.*;
 
 
@@ -39,7 +39,7 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase  {
 		while(aIter.hasNext()) {
 			AnswerScore answer = (AnswerScore)aIter.next();
 			AnswerRes newAnswerRes = 
-					new AnswerRes(Tool.getAnnoStr(docText, answer.getAnswer()),
+					new AnswerRes(answer.getAnswer().getCoveredText(),
 								  answer.getScore(),
 								  answer.getAnswer().getIsCorrect());
 			answerList.add(newAnswerRes);
@@ -59,7 +59,7 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase  {
 		Collections.sort(answerList, scoreComparison);
 		
 		//Print out the results
-		System.out.printf("*******   FINAL RESULT   *******\n");
+		//System.out.printf("*******   FINAL RESULT   *******\n");
 		double threshold = 0.5;		
 		for(int nPos=1; nPos<answerList.size(); ++nPos){
 			int correctCount=0;
@@ -77,14 +77,14 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase  {
 			aeResult.setN(nPos);
 			if(correctCount==nPos){
 				aeResult.setPrecision((double)(nPos)/(double)(checkPos+1));
-				System.out.printf("Precision @ %d:  %.2f\n", nPos, (double)(nPos)/(double)(checkPos+1));
+				//System.out.printf("Precision @ %d:  %.2f\n", nPos, (double)(nPos)/(double)(checkPos+1));
 			}
 			else{
 				aeResult.setPrecision(0);
-				System.out.printf("Precision @ %d:  0.00\n", nPos);
+				//System.out.printf("Precision @ %d:  0.00\n", nPos);
 			}
 			aeResult.addToIndexes();
 		}
-		System.out.printf("*********************************");
+		//System.out.printf("*********************************");
 	}
 }

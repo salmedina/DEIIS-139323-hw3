@@ -8,7 +8,6 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.jcas.cas.FSArray;
 
-import edu.cmu.deiis.Tools.Tool;
 import edu.cmu.deiis.types.*;
 
 public class TokenAnnotator extends JCasAnnotator_ImplBase {
@@ -32,12 +31,12 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 			question = (Question)qIter.next();
 			
 			//Get question string
-			tmpStr = Tool.getAnnoStr(docText, question);
-			System.out.println("TokenAnnotator> Question: "+ tmpStr);
+			tmpStr = question.getCoveredText();
+			//System.out.println("TokenAnnotator> Question: "+ tmpStr);
 			
 			//Tokenize
 			FSArray	tokensArr = buildTokensArr(aJCas, question, tmpStr);
-			System.out.println("TokenAnnotator> #tokens="+tokensArr.size());
+			//System.out.println("TokenAnnotator> #tokens="+tokensArr.size());
 			//Add to the index
 			QuestionTokens	qTokensAnno = new QuestionTokens(aJCas);
 			qTokensAnno.setQuestion(question);
@@ -54,12 +53,12 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 			answer = (Answer)aIter.next();
 			
 			//Get question string
-			tmpStr = Tool.getAnnoStr(docText, answer);
-			System.out.println("TokenAnnotator> Answer: "+ tmpStr);
+			tmpStr = answer.getCoveredText();
+			//System.out.println("TokenAnnotator> Answer: "+ tmpStr);
 			
 			//Tokenize
 			FSArray	tokensArr = buildTokensArr(aJCas, answer, tmpStr);
-			System.out.println("TokenAnnotator> #tokens="+tokensArr.size());
+			//System.out.println("TokenAnnotator> #tokens="+tokensArr.size());
 			//Add to the index
 			AnswerTokens	qTokensAnno = new AnswerTokens(aJCas);
 			qTokensAnno.setAnswer(answer);

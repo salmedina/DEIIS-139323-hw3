@@ -41,7 +41,13 @@
         </value>
       </nameValuePair>
     </configurationParameterSettings>
-    <typeSystemDescription/>
+    <!-- Type System of CASes returned by this Collection Reader -->
+
+        <typeSystemDescription>
+          <imports>
+            <import name="org.apache.uima.examples.SourceDocumentInformation"/>
+          </imports>
+        </typeSystemDescription>
     <typePriorities/>
     <fsIndexCollection/>
     <capabilities>

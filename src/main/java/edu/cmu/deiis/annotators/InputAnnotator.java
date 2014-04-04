@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.jcas.JCas;
 
-import edu.cmu.deiis.Tools.Tool;
 import edu.cmu.deiis.types.*;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -36,7 +35,7 @@ public class InputAnnotator extends JCasAnnotator_ImplBase {
       annotation.setEnd(matcher.end(1));
       annotation.addToIndexes();
       
-      System.out.printf("InputAnnotator> Q: %s\n", Tool.getAnnoStr(docText, annotation));
+      //System.out.printf("InputAnnotator> Q: %s\n", annotation.getCoveredText());
     }
     
     // search for Answers
@@ -49,7 +48,7 @@ public class InputAnnotator extends JCasAnnotator_ImplBase {
       annotation.setEnd(matcher.end(3));
       //Set value to correct
       String isCorrectStr = docText.substring(matcher.start(2), matcher.end(2));
-      System.out.printf("InputAnnotator> A: %s - %s\n", Tool.getAnnoStr(docText, annotation), isCorrectStr);
+      //System.out.printf("InputAnnotator> A: %s - %s\n", annotation.getCoveredText(), isCorrectStr);
       annotation.setIsCorrect(Integer.parseInt(isCorrectStr)==1);
       annotation.addToIndexes();
     }

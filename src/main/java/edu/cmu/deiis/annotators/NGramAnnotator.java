@@ -5,7 +5,6 @@ import java.util.Iterator;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.jcas.JCas;
 
-import edu.cmu.deiis.Tools.*;
 import edu.cmu.deiis.types.*;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -29,7 +28,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 		//Get the input questions
 		FSIndex		qIndex = aJCas.getAnnotationIndex(QuestionTokens.type);
 		Iterator	qIter = qIndex.iterator();
-		System.out.println("NGramAnnotator> Question indexes obtained");
+		//System.out.println("NGramAnnotator> Question indexes obtained");
 		while(qIter.hasNext()) {
 			QuestionNGram	qNGram = new QuestionNGram(aJCas);
 			QuestionTokens	qTokens = (QuestionTokens)qIter.next();
@@ -54,17 +53,17 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 			qNGram.addToIndexes();
 			
 			
-			System.out.println("NGramAnnotator> "+ Tool.getAnnoStr(docText, qNGram.getQuestion()));
-			System.out.println("NGramAnnotator> unigram.size = "+ unigram.getElements().size());
-			System.out.println("NGramAnnotator> bigram.size = "+ bigram.getElements().size());
-			System.out.println("NGramAnnotator> trigram.size = "+ trigram.getElements().size());
+			//System.out.println("NGramAnnotator> "+ qNGram.getQuestion().getCoveredText());
+			//System.out.println("NGramAnnotator> unigram.size = "+ unigram.getElements().size());
+			//System.out.println("NGramAnnotator> bigram.size = "+ bigram.getElements().size());
+			//System.out.println("NGramAnnotator> trigram.size = "+ trigram.getElements().size());
 			
 		}
 		
 		//Get the input answers
 		FSIndex		aIndex = aJCas.getAnnotationIndex(AnswerTokens.type);
 		Iterator	aIter = aIndex.iterator();
-		System.out.println("NGramAnnotator> Answer indexes obtained");
+		//System.out.println("NGramAnnotator> Answer indexes obtained");
 		while(aIter.hasNext()) {
 			AnswerNGram		aNGram = new AnswerNGram(aJCas);
 			AnswerTokens	aTokens = (AnswerTokens)aIter.next();
@@ -88,10 +87,10 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
 			aNGram.setTrigram(trigram);
 			aNGram.addToIndexes();
 			
-			System.out.println("NGramAnnotator> "+ docText.substring(aNGram.getAnswer().getBegin(), aNGram.getAnswer().getEnd()));
-			System.out.println("NGramAnnotator> unigram.size = "+ unigram.getElements().size());
-			System.out.println("NGramAnnotator> bigram.size = "+ bigram.getElements().size());
-			System.out.println("NGramAnnotator> trigram.size = "+ trigram.getElements().size());
+			//System.out.println("NGramAnnotator> "+ docText.substring(aNGram.getAnswer().getBegin(), aNGram.getAnswer().getEnd()));
+			//System.out.println("NGramAnnotator> unigram.size = "+ unigram.getElements().size());
+			//System.out.println("NGramAnnotator> bigram.size = "+ bigram.getElements().size());
+			//System.out.println("NGramAnnotator> trigram.size = "+ trigram.getElements().size());
 		}
 	}
 	

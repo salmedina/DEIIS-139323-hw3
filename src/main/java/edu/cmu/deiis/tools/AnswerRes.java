@@ -1,4 +1,4 @@
-package edu.cmu.deiis.Tools;
+package edu.cmu.deiis.tools;
 
 /*
  * Object representation of the Answer annotation

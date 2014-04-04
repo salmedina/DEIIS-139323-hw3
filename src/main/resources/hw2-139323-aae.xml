@@ -42,9 +42,24 @@
         <inputs>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.QuestionNGram</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerNGram</type>
+        <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerTokens</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Result</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
+        <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
         </inputs>
         <outputs>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
+        <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerNGram</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.QuestionNGram</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerTokens</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Result</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
+        <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
         </outputs>
         <languagesSupported/>
       </capability>

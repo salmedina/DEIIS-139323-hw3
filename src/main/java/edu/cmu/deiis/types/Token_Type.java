@@ -10,8 +10,11 @@ import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
+import org.apache.uima.cas.impl.FeatureImpl;
+import org.apache.uima.cas.Feature;
+
 /** 
- * Updated by JCasGen Sat Mar 29 04:39:00 CST 2014
+ * Updated by JCasGen Thu Apr 03 01:46:42 CST 2014
  * @generated */
 public class Token_Type extends Annotation_Type {
   /** @generated 
@@ -45,6 +48,56 @@ public class Token_Type extends Annotation_Type {
 
 
 
+  /** @generated */
+  final Feature casFeat_POS;
+  /** @generated */
+  final int     casFeatCode_POS;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getPOS(int addr) {
+        if (featOkTst && casFeat_POS == null)
+      jcas.throwFeatMissing("POS", "edu.cmu.deiis.types.Token");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_POS);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setPOS(int addr, String v) {
+        if (featOkTst && casFeat_POS == null)
+      jcas.throwFeatMissing("POS", "edu.cmu.deiis.types.Token");
+    ll_cas.ll_setStringValue(addr, casFeatCode_POS, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_lemma;
+  /** @generated */
+  final int     casFeatCode_lemma;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getLemma(int addr) {
+        if (featOkTst && casFeat_lemma == null)
+      jcas.throwFeatMissing("lemma", "edu.cmu.deiis.types.Token");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_lemma);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setLemma(int addr, String v) {
+        if (featOkTst && casFeat_lemma == null)
+      jcas.throwFeatMissing("lemma", "edu.cmu.deiis.types.Token");
+    ll_cas.ll_setStringValue(addr, casFeatCode_lemma, v);}
+    
+  
+
+
+
   /** initialize variables to correspond with Cas Type and Features
 	 * @generated
 	 * @param jcas JCas
@@ -53,6 +106,14 @@ public class Token_Type extends Annotation_Type {
   public Token_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
+
+ 
+    casFeat_POS = jcas.getRequiredFeatureDE(casType, "POS", "uima.cas.String", featOkTst);
+    casFeatCode_POS  = (null == casFeat_POS) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_POS).getCode();
+
+ 
+    casFeat_lemma = jcas.getRequiredFeatureDE(casType, "lemma", "uima.cas.String", featOkTst);
+    casFeatCode_lemma  = (null == casFeat_lemma) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_lemma).getCode();
 
   }
 }

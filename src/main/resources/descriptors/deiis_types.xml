@@ -4,6 +4,9 @@
   <description>Contains the necessary types to implement an n-gram analysis engine.</description>
   <version>1.0</version>
   <vendor/>
+  <imports>
+    <import name="org.cleartk.TypeSystem"/>
+  </imports>
   <types>
     <typeDescription>
       <name>edu.cmu.deiis.types.Annotation</name>
@@ -26,6 +29,18 @@
       <name>edu.cmu.deiis.types.Token</name>
       <description/>
       <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+    <features>
+        <featureDescription>
+          <name>POS</name>
+          <description>To save Core NLPs Part Of Speech</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>lemma</name>
+          <description>Stores the lemmata of the token obtained from the Core NLP</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
     </typeDescription>
     <typeDescription>
       <name>edu.cmu.deiis.types.NGram</name>
@@ -183,6 +198,23 @@
           <name>precision</name>
           <description/>
           <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  <typeDescription>
+      <name>edu.cmu.deiis.types.Sentence</name>
+      <description>Describes the sentence found by the Core NLP</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.EntityMention</name>
+      <description/>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+    <features>
+        <featureDescription>
+          <name>entityType</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>

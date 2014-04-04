@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** 
- * Updated by JCasGen Sat Mar 29 04:39:00 CST 2014
+ * Updated by JCasGen Thu Apr 03 01:46:42 CST 2014
  * @generated */
 public class QuestionNGram_Type extends Annotation_Type {
   /** @generated 
