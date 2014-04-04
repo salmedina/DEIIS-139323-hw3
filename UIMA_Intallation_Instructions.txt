@@ -1,0 +1,28 @@
+Author: Salvador Medina
+DATE: 2014-03-30 
+
+Instruction to install everything required for HW3
+In a debian based linux distro you need to install, eclipse, maven, git and download the UIMA SDK
+
+1) apt-get install eclipse
+2) apt-get install maven
+3) apt-get install git
+4) Download from http://uima.apache.org/downloads.cgi version 2.4.0
+   and extract into the installation path of your convenience. e.g. /usr/local
+
+Configure your Eclipse plug-ins: UIMA, SLF4J(required by maven) and Maven
+Help > Install new Software > 
+1) Name: UIMA
+   URL: http://www.apache.org/dist/uima/eclipse-update-site/
+2) Name: SLF4J
+   URL: http://www.fuin.org/p2-repository/
+   Select maven osgi-bundles
+3) Name: Maven
+   URL:
+
+Then you need to setup the environment vars. If you are working with bash you need to set the following vars in the .bash_profile.sh file to always have it running in your terminal. If you want a more global set when you start your session you need to set them in the  file. The variables and values are as follows:
+
+1) UIMA_HOME=/usr/local/apache-uima-as   	[ path to your uima-as-2.4.x folder ]
+2) UIMA_CLASSPATH=./target:./target/dependency	[ path to your UIMA binaries, imported by Maven ]
+3) JAVA_HOME=/usr/lib/jvm/java-6-oracle		[ set it to the path where your JDK is installed ] 
+4) CLASSPATH=$JAVA_HOME/lib			[ set it to the JDK binaries ]
