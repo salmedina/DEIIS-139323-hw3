@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Thu Apr 03 01:35:48 CST 2014 */
-package org.cleartk.score.type;
+/* First created by JCasGen Fri Apr 04 19:03:17 CST 2014 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,12 +11,11 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
-import org.apache.uima.jcas.cas.TOP_Type;
 
 /** 
  * Updated by JCasGen Fri Apr 04 19:11:37 CST 2014
  * @generated */
-public class ScoredTOP_Type extends TOP_Type {
+public class NamedEntity_Type extends Annotation_Type {
   /** @generated 
    * @return the generator for this type
    */
@@ -26,47 +25,47 @@ public class ScoredTOP_Type extends TOP_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (ScoredTOP_Type.this.useExistingInstance) {
+  			 if (NamedEntity_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = ScoredTOP_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = NamedEntity_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new ScoredTOP(addr, ScoredTOP_Type.this);
-  			   ScoredTOP_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new NamedEntity(addr, NamedEntity_Type.this);
+  			   NamedEntity_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new ScoredTOP(addr, ScoredTOP_Type.this);
+        } else return new NamedEntity(addr, NamedEntity_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = ScoredTOP.typeIndexID;
+  public final static int typeIndexID = NamedEntity.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("org.cleartk.score.type.ScoredTOP");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.types.NamedEntity");
  
   /** @generated */
-  final Feature casFeat_score;
+  final Feature casFeat_entityType;
   /** @generated */
-  final int     casFeatCode_score;
+  final int     casFeatCode_entityType;
   /** @generated
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
-  public double getScore(int addr) {
-        if (featOkTst && casFeat_score == null)
-      jcas.throwFeatMissing("score", "org.cleartk.score.type.ScoredTOP");
-    return ll_cas.ll_getDoubleValue(addr, casFeatCode_score);
+  public String getEntityType(int addr) {
+        if (featOkTst && casFeat_entityType == null)
+      jcas.throwFeatMissing("entityType", "edu.cmu.deiis.types.NamedEntity");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_entityType);
   }
   /** @generated
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
-  public void setScore(int addr, double v) {
-        if (featOkTst && casFeat_score == null)
-      jcas.throwFeatMissing("score", "org.cleartk.score.type.ScoredTOP");
-    ll_cas.ll_setDoubleValue(addr, casFeatCode_score, v);}
+  public void setEntityType(int addr, String v) {
+        if (featOkTst && casFeat_entityType == null)
+      jcas.throwFeatMissing("entityType", "edu.cmu.deiis.types.NamedEntity");
+    ll_cas.ll_setStringValue(addr, casFeatCode_entityType, v);}
     
   
 
@@ -77,13 +76,13 @@ public class ScoredTOP_Type extends TOP_Type {
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */
-  public ScoredTOP_Type(JCas jcas, Type casType) {
+  public NamedEntity_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_score = jcas.getRequiredFeatureDE(casType, "score", "uima.cas.Double", featOkTst);
-    casFeatCode_score  = (null == casFeat_score) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_score).getCode();
+    casFeat_entityType = jcas.getRequiredFeatureDE(casType, "entityType", "uima.cas.String", featOkTst);
+    casFeatCode_entityType  = (null == casFeat_entityType) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_entityType).getCode();
 
   }
 }

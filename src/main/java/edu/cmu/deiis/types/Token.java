@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Thu Apr 03 01:46:42 CST 2014
+ * Updated by JCasGen Fri Apr 04 19:11:37 CST 2014
  * XML source: /home/zal/workspace/hw3-139323/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Token extends Annotation {
@@ -76,7 +76,7 @@ public class Token extends Annotation {
   //*--------------*
   //* Feature: POS
 
-  /** getter for POS - gets To save Core NLPs Part Of Speech
+  /** getter for POS - gets Part of Speech of the token within the sentence
    * @generated
    * @return value of the feature 
    */
@@ -85,7 +85,7 @@ public class Token extends Annotation {
       jcasType.jcas.throwFeatMissing("POS", "edu.cmu.deiis.types.Token");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_POS);}
     
-  /** setter for POS - sets To save Core NLPs Part Of Speech 
+  /** setter for POS - sets Part of Speech of the token within the sentence 
    * @generated
    * @param v value to set into the feature 
    */
@@ -98,7 +98,7 @@ public class Token extends Annotation {
   //*--------------*
   //* Feature: lemma
 
-  /** getter for lemma - gets Stores the lemmata of the token obtained from the Core NLP
+  /** getter for lemma - gets Stores the lemma of the token
    * @generated
    * @return value of the feature 
    */
@@ -107,7 +107,7 @@ public class Token extends Annotation {
       jcasType.jcas.throwFeatMissing("lemma", "edu.cmu.deiis.types.Token");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_lemma);}
     
-  /** setter for lemma - sets Stores the lemmata of the token obtained from the Core NLP 
+  /** setter for lemma - sets Stores the lemma of the token 
    * @generated
    * @param v value to set into the feature 
    */
@@ -115,6 +115,28 @@ public class Token extends Annotation {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_lemma == null)
       jcasType.jcas.throwFeatMissing("lemma", "edu.cmu.deiis.types.Token");
     jcasType.ll_cas.ll_setStringValue(addr, ((Token_Type)jcasType).casFeatCode_lemma, v);}    
+   
+    
+  //*--------------*
+  //* Feature: ne
+
+  /** getter for ne - gets Stores the named entity label
+   * @generated
+   * @return value of the feature 
+   */
+  public String getNe() {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_ne == null)
+      jcasType.jcas.throwFeatMissing("ne", "edu.cmu.deiis.types.Token");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_ne);}
+    
+  /** setter for ne - sets Stores the named entity label 
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setNe(String v) {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_ne == null)
+      jcasType.jcas.throwFeatMissing("ne", "edu.cmu.deiis.types.Token");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Token_Type)jcasType).casFeatCode_ne, v);}    
   }
 
     

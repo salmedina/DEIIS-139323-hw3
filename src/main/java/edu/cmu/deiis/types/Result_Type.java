@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** This annotation stores the final result from the analysis that is realized in the Evalutation Annotator
- * Updated by JCasGen Thu Apr 03 01:46:42 CST 2014
+ * Updated by JCasGen Fri Apr 04 19:11:37 CST 2014
  * @generated */
 public class Result_Type extends Annotation_Type {
   /** @generated 

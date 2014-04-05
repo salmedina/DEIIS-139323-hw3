@@ -14,7 +14,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** 
- * Updated by JCasGen Thu Apr 03 01:46:42 CST 2014
+ * Updated by JCasGen Fri Apr 04 19:11:37 CST 2014
  * @generated */
 public class Token_Type extends Annotation_Type {
   /** @generated 
@@ -95,6 +95,30 @@ public class Token_Type extends Annotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_lemma, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_ne;
+  /** @generated */
+  final int     casFeatCode_ne;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getNe(int addr) {
+        if (featOkTst && casFeat_ne == null)
+      jcas.throwFeatMissing("ne", "edu.cmu.deiis.types.Token");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_ne);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setNe(int addr, String v) {
+        if (featOkTst && casFeat_ne == null)
+      jcas.throwFeatMissing("ne", "edu.cmu.deiis.types.Token");
+    ll_cas.ll_setStringValue(addr, casFeatCode_ne, v);}
+    
+  
 
 
 
@@ -114,6 +138,10 @@ public class Token_Type extends Annotation_Type {
  
     casFeat_lemma = jcas.getRequiredFeatureDE(casType, "lemma", "uima.cas.String", featOkTst);
     casFeatCode_lemma  = (null == casFeat_lemma) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_lemma).getCode();
+
+ 
+    casFeat_ne = jcas.getRequiredFeatureDE(casType, "ne", "uima.cas.String", featOkTst);
+    casFeatCode_ne  = (null == casFeat_ne) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_ne).getCode();
 
   }
 }

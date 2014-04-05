@@ -32,12 +32,17 @@
     <features>
         <featureDescription>
           <name>POS</name>
-          <description>To save Core NLPs Part Of Speech</description>
+          <description>Part of Speech of the token within the sentence</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>lemma</name>
-          <description>Stores the lemmata of the token obtained from the Core NLP</description>
+          <description>Stores the lemma of the token</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>ne</name>
+          <description>Stores the named entity label</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
       </features>
@@ -207,7 +212,7 @@
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>
-      <name>edu.cmu.deiis.types.EntityMention</name>
+      <name>edu.cmu.deiis.types.NamedEntity</name>
       <description/>
       <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
     <features>

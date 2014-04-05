@@ -20,7 +20,7 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 
-import edu.cmu.deiis.types.EntityMention;
+import edu.cmu.deiis.types.NamedEntity;
 import edu.cmu.deiis.types.Sentence;
 import edu.cmu.deiis.types.Token;
 
@@ -71,33 +71,8 @@ public class StanfordCoreNlpAnnotator extends JCasAnnotator_ImplBase {
 				Token sToken = new Token(aJCas, startIndex, endIndex);
 				sToken.setLemma(token.get(LemmaAnnotation.class));
 				sToken.setPOS(token.get(PartOfSpeechAnnotation.class));
+				sToken.setNe(token.get(NamedEntityTagAnnotation.class));
 				sToken.addToIndexes(aJCas);
-
-				// Add NER annotation
-				String namedEnt = token.get(NamedEntityTagAnnotation.class);
-				if (namedEnt != null) {
-					if (namedEnt.equals(preNe) && !preNe.equals("")) {
-						//If already added and not empty: DO_NOTHING
-					} else if (preNe.equals("")) {
-						// if the previous is start of sentence(no label).
-						neBegin = startIndex;
-						preNe = namedEnt;
-					} else {
-						//If it has a label
-						if (!preNe.equals("O")) {// "O": no label
-							//Import Named Entity into our index
-							EntityMention sne = new EntityMention(aJCas);
-							sne.setBegin(neBegin);
-							sne.setEnd(neEnd);
-							sne.setEntityType(preNe);
-							sne.addToIndexes(aJCas);
-						}
-						// set the next span of NE
-						neBegin = startIndex;
-						preNe = namedEnt;
-					}
-					neEnd = endIndex;
-				}
 			}
 		}
 	}

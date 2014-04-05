@@ -23,7 +23,7 @@ TODO: Give results as questions and answers</description>
         <outputs>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Sentence</type>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.EntityMention</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NamedEntity</type>
         </outputs>
         <languagesSupported/>
       </capability>

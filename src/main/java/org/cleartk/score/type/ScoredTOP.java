@@ -11,7 +11,7 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** 
- * Updated by JCasGen Thu Apr 03 01:46:42 CST 2014
+ * Updated by JCasGen Fri Apr 04 19:11:37 CST 2014
  * XML source: /home/zal/workspace/hw3-139323/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class ScoredTOP extends TOP {
